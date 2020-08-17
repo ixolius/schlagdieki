@@ -14,10 +14,10 @@ function createControl(x,y,width,height)
   control.y = y
   control.width = width
   control.height = height
-  control.innerX = control.x +4
-  control.innerY = control.y +4
-  control.innerWidth = control.width -8
-  control.innerHeight = control.height -8
+  control.innerX = control.x + CONFIG.controlMargin
+  control.innerY = control.y + CONFIG.controlMargin
+  control.innerWidth = control.width - CONFIG.controlMargin*2
+  control.innerHeight = control.height - CONFIG.controlMargin*2
   control.draw = function()
     love.graphics.setColor(1,1,1)
     love.graphics.rectangle("line",control.x,control.y,control.width,control.height)
@@ -34,38 +34,20 @@ function createControl(x,y,width,height)
   return control
 end
 
-function createControlList(n,width)
+function createControlList(n,initialX,y,width,height)
   local controlList = {}
   controlList.table  = {}
-  controlList.images = {}
   controlList.n = n
-  --load images
-  controlList.images["small"] = love.graphics.newImage("Abbildungen/Tomate_sehr_klein.png")
-  controlList.images["middle"] = love.graphics.newImage("Abbildungen/Tomate_klein.png")
-  controlList.images["big"] = love.graphics.newImage("Abbildungen/Tomate_mittel.png")
-  controlList.images["ripe"] = love.graphics.newImage("Abbildungen/Tomate_groß.png")
   
-  local windowWidth,windowHeight = love.graphics.getDimensions()
-  local spareWidth = windowWidth - n*width
-  for i,v in pairs(controlList.images) do
-    spareWidth = spareWidth - v:getWidth()
-  end
-  if spareWidth < n + 1 then
+  local spareWidth = width - (n+1)*CONFIG.controlWidth --Abstand zum Bild
+  if spareWidth < n + 2 then
     error("To broad controls for this window")
   end
-  local distance = math.floor(spareWidth / (n+1))
-  local x = distance
+  local distance = math.floor(spareWidth / n)
+  local x = initialX
   for i = 1,n do
-    table.insert(controlList.table,createControl(x,windowHeight*0.25,width,windowHeight*0.5))
-    x = x + width + distance
-    if i == 3 then
-      x = x + controlList.images["small"]:getWidth()
-    elseif i == 5 then
-      x = x + controlList.images["middle"]:getWidth()
-    elseif i == 8 then
-      x = x + controlList.images["big"]:getWidth()
-    end
-    
+    table.insert(controlList.table,createControl(x,y,CONFIG.controlWidth,height))
+    x = x + CONFIG.controlWidth + distance
   end
   controlList.getLevels = function ()
     local result = {}
@@ -84,16 +66,6 @@ function createControlList(n,width)
       v.draw()
       local x = v.x + v.width
       local y = v.y+ v.height
-      love.graphics.setColor(1,1,1,1)
-      if i == 3 then
-        love.graphics.draw(controlList.images["small"],x,y - controlList.images["small"]:getHeight())
-      elseif i == 5 then
-        love.graphics.draw(controlList.images["middle"],x,y - controlList.images["middle"]:getHeight())
-      elseif i == 8 then
-        love.graphics.draw(controlList.images["big"],x,y - controlList.images["big"]:getHeight())
-      elseif i == 10 then
-        love.graphics.draw(controlList.images["ripe"],x,y - controlList.images["ripe"]:getHeight())
-      end
     end
   end
   return controlList
