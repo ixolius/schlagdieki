@@ -16,10 +16,10 @@ Feature:
 
 - Farbverlauf (done)
 - DIN Schriften (done)
-- Zeitachse
+- Zeitachse (done)
 - Bilder mit transparenten Hintergrund abhängig von Ertrag (done)
-- Wassergaben in mm pro Balken
-- zusätzliches panel "back"
+- Wassergaben in mm pro Balken (done)
+- zusätzliches panel "back" (done)
 - Panels vertikal verkleinern (oben, unten)
 
 - Optional: Bestenliste

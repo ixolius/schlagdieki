@@ -68,6 +68,7 @@ function createInitialScreen()
   panels.output = createPanel(panel2X, lowerY, panelWidth, lowerHeight, "? t/ha", bigFont)
   panels.start = createPanel(panel1X, lowerY, panelWidth, lowerHeight, "Start", bigFont, startFunction)
   panels.ki = createPanel(panel3X, lowerY, panelWidth, lowerHeight, "Ertrag mit KI: 9.758 t/ha", bigFont)
+  panels.back = createPanel(panel4X,lowerY,panelWidth,lowerHeight,"Beenden",bigFont, function() love.event.quit(0) end)
   local helptext = "Verschiebe die Balken, um die Bewässeungsmenge für die 10 Bewässerungstage zu steuern. "
   helptext = helptext .. "Du hast immer nur 300mm Wasser, schiebst du einen Balken nach oben, sinken die Mengen für die anderen Tage. "
   helptext = helptext .. "Schaffst du es, die KI zu schlagen?"

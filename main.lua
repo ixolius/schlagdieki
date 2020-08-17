@@ -63,4 +63,5 @@ end
 
 love.mousepressed = function(x,y)
   panels.start.click(x,y)
+  panels.back.click(x,y)
 end
