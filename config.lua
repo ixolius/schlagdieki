@@ -11,12 +11,12 @@ end
 
 -- START OF THE CONFIGURATION
 CONFIG = {
-  
+
   --Window proportions
   --global margins (even number!)
-  globalMargin = 40,
+  globalMargin = 60,
   --margins between the three vertical sections
-  verticalMargin = 40,
+  verticalMargin = 60,
   --relative size of the upper part (the three parts should add up to 1)
   upperPart = 0.2,
   --relative size of the middle part
@@ -34,6 +34,10 @@ CONFIG = {
   imageWidth = 4,
   --margin between between the inner and outer rectangle (even number!)
   controlMargin = 4,
+  --space between control and text
+  controlTextMargin = 5,
+  --size of the control labels
+  miniFontSize = 18,
   
   --Options for the panels
   --Font size for the "big font"

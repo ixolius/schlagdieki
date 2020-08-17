@@ -10,6 +10,8 @@ love.load = function()
   --important globals
   controls = {}
   panels = {}
+  sum = 0
+  
   createInitialScreen()
   drawAnimation = false
   tomatoSize = 3
@@ -24,6 +26,14 @@ love.draw = function()
 end
 
 love.update = function(dt)
+  local fillValues = controls.getLevels()
+  sum = 0
+  for i,v in ipairs(fillValues) do
+    sum = sum + v
+  end
+  if sum == 0 then
+    sum = 10
+  end
   if drawAnimation then
     local r,g,b = panels.output.getColor()
     if animationPhase < 2 then

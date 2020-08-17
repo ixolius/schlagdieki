@@ -1,12 +1,5 @@
 local startFunction = function()
   local fillValues = controls.getLevels()
-  local sum = 0
-  for i,v in ipairs(fillValues) do
-    sum = sum + v
-  end
-  if sum == 0 then
-    sum = 300
-  end
   local command = "perl C:/_Schlag_die_KI/write_schedule_aquacrop.pl"
   local val = 0.0
   for i,v in ipairs(fillValues) do
@@ -66,7 +59,8 @@ function createInitialScreen()
   
   imageBox = createImageBox(imageX, middleY, imageWidth, middleHeight)
   
-  controls = createControlList(CONFIG.numOfControls,CONFIG.globalMargin,middleY,availableWidth - imageWidth,middleHeight)
+  local miniFont = love.graphics.newFont("DIN Regular.otf", CONFIG.miniFontSize)
+  controls = createControlList(CONFIG.numOfControls,CONFIG.globalMargin,middleY,availableWidth - imageWidth,middleHeight,miniFont)
   
   local smallFont = love.graphics.newFont("DIN Regular.otf", CONFIG.smallFontSize)
   local bigFont = love.graphics.newFont("DINBd___.ttf",CONFIG.bigFontSize)
