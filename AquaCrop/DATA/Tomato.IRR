@@ -1,0 +1,11 @@
+Sprinkler irigation, 10mm every 5 days
+   4.0   : AquaCrop Version (June 2012)
+   1     : Sprinkler irrigation
+ 100     : Percentage of soil surface wetted by irrigation
+   2     : Generate irrigation schedule
+   1     : Time criterion = fixed intervals
+   2     : Fixed application depth
+
+  From day    Interval (days)    Application depth (mm)    ECw (dS/m)
+=========================================================================
+       1             14                  25                   0.0

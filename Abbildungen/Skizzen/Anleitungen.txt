@@ -1,0 +1,88 @@
+//////////////////////////////////////////ACHTUNG//////////////////////////////////////////////////////////////////
+Die Cookbook.inx Datei ist ein Exportformat aus InDesign CS4 für CS3
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ADOBE INDESIGN - DRUCKANLEITUNGEN FÜR BELICHTUNGSBÜROBERICHT
+
+SATZDATEINAME: Cookbook.indd
+
+PACKDATUM: 09.02.2011 16:24
+Erstellungsdatum 17.12.2010
+Änderungsdatum: 09.02.2011
+
+AUFTRAGGEBER
+
+Firma: 
+Ansprechpartner: 
+Adresse: 
+
+
+
+
+
+Telefon: 
+Fax: 
+E-Mail: 
+
+BESONDERE ANWEISUNGEN UND ANDERE ANMERKUNGEN
+
+
+
+
+
+
+Externe Zusatzmodule 0
+Nicht deckende Objekte:Ohne
+
+SCHRIFTARTEN
+2 Schriftart(en) verwendet; 0 fehlend, 2 eingebettet, 0 unvollst., 0 geschützt
+
+Schriftarten verpackt
+- Name: MyriadPro-Bold; Typ: Type 1, Status: eingebettet
+- Name: MyriadPro-Regular; Typ: Type 1, Status: eingebettet
+
+
+FARBEN UND DRUCKFARBEN
+4 Prozessfarbe(n); 0 Volltonfarbe(n)
+
+- Name und Typ: Prozessfarbe Cyan; Winkel: 15,000; Linien/Zoll: 60,000
+- Name und Typ: Prozessfarbe Magenta; Winkel: 75,000; Linien/Zoll: 60,000
+- Name und Typ: Prozessfarbe Gelb; Winkel: 0,000; Linien/Zoll: 60,000
+- Name und Typ: Prozessfarbe Schwarz; Winkel: 45,000; Linien/Zoll: 60,000
+
+
+VERKNÜPFUNGEN UND BILDER
+(Nur fehlende & eingebettete Verknüpfungen)
+Verknüpfungen und Bilder: 12 Verknüpfung(en) gefunden; 0 geändert, 0 fehlend
+Bilder: 0 eingebettet, 8 verwenden RGB-Farbraum
+
+
+DRUCKEINSTELLUNGEN
+PPD: HP Color LaserJet 5550 PS, (\\s-druck-mt2\R2424-Farbe-A3-PS)
+Druckausgabe: Drucker
+Anzahl der Exemplare: 1
+Druckbögen: Nein
+Gerade/Ungerade Seiten: Beides
+Seiten: Alle
+Probedruck: Nein
+Druckseite aufteilen: Ohne
+Skalieren: 100 %, 100 %
+Seitenposition: Oben links
+Ebenen drucken: Sichtbare und druckbare Ebenen
+Druckermarken: Ohne
+Anschnitt: 0 mm, 0 mm, 0 mm, 0 mm
+Farbe: Composite-CMYK
+Überfüllungsmodus: Ohne
+Bilddaten senden: Optimierte Abtastauflösung
+OPI/DCS-Bildersetzung: Nein
+Seitenformat: A4
+Papierabmessungen: 209,903 mm x 297,039 mm
+Format: Querformat
+Negativ: Nein
+Spiegelmodus: Aus
+
+
+DATEIPAKETLISTE
+
+1. Cookbook.indd; Typ: Adobe InDesign-Satzdatei; Größe: 2484K
