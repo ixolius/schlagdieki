@@ -12,10 +12,10 @@ orange < 7 t/ha  -> kleine Tomate
 
 Feature:
 
-- GIT!!!!!
+- GIT!!!!! (done)
 
-- Farbverlauf
-- DIN Schriften
+- Farbverlauf (done)
+- DIN Schriften (done)
 - Zeitachse
 - Bilder mit transparenten Hintergrund abhängig von Ertrag
 - Wassergaben in mm pro Balken

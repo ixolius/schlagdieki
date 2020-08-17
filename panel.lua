@@ -1,9 +1,9 @@
 
 -- Creates a panel that can be button, label and panel at once
 
-function createPanel(x,y,width,height,text,size,callback)
+function createPanel(x,y,width,height,text,font,callback)
   local panel = {}
-  panel.font = love.graphics.newFont("bahnschrift.ttf", size)
+  panel.font = font
   local fontHeight = panel.font:getHeight() --intermidate values, no need to make them attributes, since panel sizes don't change
   local fontWidth = panel.font:getWidth(text)
   panel.x = x
@@ -13,16 +13,13 @@ function createPanel(x,y,width,height,text,size,callback)
   panel.text = text
   
   local numberOfLines = math.ceil(fontWidth / (width -20))
-  print(numberOfLines)
   local textHeight = fontHeight*numberOfLines
   if textHeight + 20 > height then
     error("Too much text in a panel: " .. text)
   end
   panel.textY = panel.y + (height - textHeight) / 2
   
-  panel.colorR = 171/255
-  panel.colorG = 210/255
-  panel.colorB = 237/255
+  panel.colorR, panel.colorG, panel.colorB = 1,1,1
   
   panel.draw = function()
     love.graphics.setColor(1,1,1)
@@ -40,6 +37,10 @@ function createPanel(x,y,width,height,text,size,callback)
     panel.colorR = r
     panel.colorG = g
     panel.colorB = b
+  end
+  
+  panel.getColor = function()
+    return panel.colorR, panel.colorG, panel.colorB
   end
   
   panel.click = function(x,y)
