@@ -57,14 +57,15 @@ function createInitialScreen()
   local panel3X = panel2X + CONFIG.panelMargin + panelWidth
   local panel4X = panel3X + CONFIG.panelMargin + panelWidth
   
-  imageBox = createImageBox(imageX, middleY, imageWidth, middleHeight)
-  
+  --load fonts
   local miniFont = love.graphics.newFont("DIN Regular.otf", CONFIG.miniFontSize)
-  controls = createControlList(CONFIG.numOfControls,CONFIG.globalMargin,middleY,availableWidth - imageWidth,middleHeight,miniFont)
-  
   local smallFont = love.graphics.newFont("DIN Regular.otf", CONFIG.smallFontSize)
   local bigFont = love.graphics.newFont("DINBd___.ttf",CONFIG.bigFontSize)
   
+  imageBox = createImageBox(imageX, middleY, imageWidth, middleHeight)
+  
+  controls = createControlList(CONFIG.numOfControls,CONFIG.globalMargin,middleY,availableWidth - imageWidth,middleHeight,miniFont)
+ 
   panels.output = createPanel(panel2X, lowerY, panelWidth, lowerHeight, "? t/ha", bigFont)
   panels.start = createPanel(panel1X, lowerY, panelWidth, lowerHeight, "Start", bigFont, startFunction)
   panels.ki = createPanel(panel3X, lowerY, panelWidth, lowerHeight, "Ertrag mit KI: 9.758 t/ha", bigFont)

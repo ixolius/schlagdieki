@@ -11,10 +11,12 @@ love.load = function()
   controls = {}
   panels = {}
   sum = 0
-  
-  createInitialScreen()
   drawAnimation = false
   tomatoSize = 3
+  calculationRunning = false
+  
+  createInitialScreen()
+  
 end
 
 love.draw = function()
@@ -34,24 +36,25 @@ love.update = function(dt)
   if sum == 0 then
     sum = 10
   end
+  local colorProgress = dt*6 / CONFIG.colorTransition
   if drawAnimation then
     local r,g,b = panels.output.getColor()
     if animationPhase < 2 then
-      r,g,b = 1,math.min(g + dt,1),0
+      r,g,b = 1,math.min(g + colorProgress,1),0
     elseif animationPhase < 3 then
-      r,g,b = math.max(r - dt,0), 1, 0
+      r,g,b = math.max(r - colorProgress,0), 1, 0
     elseif animationPhase < 4 then
-      r,g,b = 0,1,math.min(b + dt,1)
+      r,g,b = 0,1,math.min(b + colorProgress,1)
     elseif animationPhase < 5 then
-      r,g,b = 0, math.max(g - dt,0), 1
+      r,g,b = 0, math.max(g - colorProgress,0), 1
     elseif animationPhase < 6 then
-      r,g,b = math.min(r + dt,1), 0, 1
+      r,g,b = math.min(r + colorProgress,1), 0, 1
     elseif animationPhase < 7 then
-      r,g,b = 1,0, math.max(b - dt, 0)
+      r,g,b = 1,0, math.max(b - colorProgress, 0)
     else
       animationPhase = 1
     end
-    animationPhase = animationPhase + dt
+    animationPhase = animationPhase + colorProgress
     panels.output.setColor(r,g,b)
   end
 end

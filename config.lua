@@ -45,7 +45,8 @@ CONFIG = {
   --Font size for the "small font"
   smallFontSize = 30,
   --margin between rectangle and text (even number!)
-  panelMargin = 10 
-  
+  panelMargin = 10, 
+  --Length of the color transition cycle, in seconds
+  colorTransition = 12,
 }
 CONFIG = protect(CONFIG)
