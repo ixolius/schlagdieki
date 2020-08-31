@@ -11,7 +11,7 @@ function createControl(x,y,width,height,day,font)
   local control = {}
   control.font = font
   control.fillLevel = 0.5
-  control.text1 = "Tag " .. tostring(day)
+  control.text1 = texts.controls .. tostring(day)
   control.text1Width = control.font:getWidth(control.text1)
   control.x = x
   control.y = y

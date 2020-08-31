@@ -48,5 +48,23 @@ CONFIG = {
   panelMargin = 10, 
   --Length of the color transition cycle, in seconds
   colorTransition = 12,
+  
+  --texts
+  text_de = {
+    help = "Verschiebe die Balken, um die Menge für die 10 Bewässerungsereignisse zu steuern. Du hast immer nur 300 mm Wasser, schiebst du einen Balken nach oben, sinken die Mengen für die anderen Tage. Schaffst du es, die KI zu schlagen?",
+    start = "Start",
+    ki = "Ertrag mit KI: 9.300 t/ha",
+    back = "Beenden",
+    controls = "Tag "
+  },
+  text_en = {
+    help = "Touch and move the bars up and down to distribute 300 mm of water over 10 irrigation events. The more water you use in one event the less is left for the other events. Can you beat the AI?",
+    start = "start",
+    ki = "Yield by AI: 9.300 t/ha",
+    back = "close",
+    controls = "day "
+  }
+  
+  
 }
 CONFIG = protect(CONFIG)

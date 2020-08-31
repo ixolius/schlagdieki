@@ -1,6 +1,6 @@
 io.stdout:setvbuf("no")
 
-love.load = function()
+love.load = function(arg)
   love.window.setFullscreen(true)
   require "initialScreen"
   require "control"
@@ -8,6 +8,11 @@ love.load = function()
   require "panel"
   require "image"
   --important globals
+  if arg [1] == "de" then
+    texts = CONFIG.text_de
+  else
+    texts = CONFIG.text_en
+  end
   controls = {}
   panels = {}
   sum = 0

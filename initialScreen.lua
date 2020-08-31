@@ -67,12 +67,9 @@ function createInitialScreen()
   controls = createControlList(CONFIG.numOfControls,CONFIG.globalMargin,middleY,availableWidth - imageWidth,middleHeight,miniFont)
  
   panels.output = createPanel(panel2X, lowerY, panelWidth, lowerHeight, "? t/ha", bigFont)
-  panels.start = createPanel(panel1X, lowerY, panelWidth, lowerHeight, "Start", bigFont, startFunction)
-  panels.ki = createPanel(panel3X, lowerY, panelWidth, lowerHeight, "Ertrag mit KI: 9.300 t/ha", smallFont)
-  panels.back = createPanel(panel4X,lowerY,panelWidth,lowerHeight,"Beenden",bigFont, function() love.event.quit(0) end)
-  local helptext = "Verschiebe die Balken, um die Bewässeungsmenge für die 10 Bewässerungstage zu steuern. "
-  helptext = helptext .. "Du hast immer nur 300mm Wasser, schiebst du einen Balken nach oben, sinken die Mengen für die anderen Tage. "
-  helptext = helptext .. "Schaffst du es, die KI zu schlagen?"
-  panels.help = createPanel(CONFIG.globalMargin,upperY,availableWidth, upperHeight, helptext, smallFont)
+  panels.start = createPanel(panel1X, lowerY, panelWidth, lowerHeight, texts.start, bigFont, startFunction)
+  panels.ki = createPanel(panel3X, lowerY, panelWidth, lowerHeight, texts.ki, smallFont)
+  panels.back = createPanel(panel4X,lowerY,panelWidth,lowerHeight,texts.back,bigFont, function() love.event.quit(0) end)
+  panels.help = createPanel(CONFIG.globalMargin,upperY,availableWidth, upperHeight, texts.help, smallFont)
   panels.help.setColor(171/255,210/255,237/255)
 end
