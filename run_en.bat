@@ -1,0 +1,1 @@
+"C:\Program Files\LOVE\love.exe" C:\_Schlag_die_KI en
