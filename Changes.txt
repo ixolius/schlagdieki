@@ -50,7 +50,7 @@ Tag -> day
 Beenden -> close
 Ertrag mit KI -> Yield by AI
 
------- Deutsche / Englische Version
+------ Deutsche / Englische Version(done)
 run_de.bat
 run_en.bat
 
