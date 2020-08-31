@@ -43,7 +43,7 @@ love.update = function(dt)
   end
   local colorProgress = dt*6 / CONFIG.colorTransition
   if drawAnimation then
-    local r,g,b = panels.output.getColor()
+    local r,g,b = panels.output.getBackgroundColor()
     if animationPhase < 2 then
       r,g,b = 1,math.min(g + colorProgress,1),0
     elseif animationPhase < 3 then
@@ -60,7 +60,7 @@ love.update = function(dt)
       animationPhase = 1
     end
     animationPhase = animationPhase + colorProgress
-    panels.output.setColor(r,g,b)
+    panels.output.setBackgroundColor(r,g,b)
   end
 end
 

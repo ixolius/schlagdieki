@@ -20,10 +20,14 @@ function createPanel(x,y,width,height,text,font,callback)
   panel.textY = panel.y + (height - textHeight) / 2
   
   panel.colorR, panel.colorG, panel.colorB = 1,1,1
+  panel.bgColorR, panel.bgColorG, panel.bgColorB = 0,0,0
   
   panel.draw = function()
+    local linewidth = love.graphics.getLineWidth()
     love.graphics.setColor(1,1,1)
     love.graphics.rectangle("line",panel.x,panel.y,panel.width,panel.height)
+    love.graphics.setColor(panel.bgColorR,panel.bgColorG,panel.bgColorB)
+    love.graphics.rectangle("fill",panel.x + linewidth, panel.y + linewidth, panel.width - 2*linewidth, panel.height - 2*linewidth)
     love.graphics.setColor(panel.colorR,panel.colorG,panel.colorB)
     love.graphics.setFont(panel.font)
     love.graphics.printf(panel.text,panel.x + 10, panel.textY,panel.width -20, "center")
@@ -39,8 +43,14 @@ function createPanel(x,y,width,height,text,font,callback)
     panel.colorB = b
   end
   
-  panel.getColor = function()
-    return panel.colorR, panel.colorG, panel.colorB
+  panel.setBackgroundColor = function(r,g,b)
+    panel.bgColorR = r
+    panel.bgColorG = g
+    panel.bgColorB = b
+  end
+  
+  panel.getBackgroundColor = function()
+    return panel.bgColorR, panel.bgColorG, panel.bgColorB
   end
   
   panel.click = function(x,y)

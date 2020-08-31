@@ -18,18 +18,23 @@ local startFunction = function()
   --love.window.setFullscreen(true)
   local numericalResult = tonumber(result)
   drawAnimation = false
+  --THE SETTINGS FOR COLORS, TOMATO IMAGES AND CORRESPONDING VALUES ARE BELOW
+  panels.output.setColor(0,0,0)
   if numericalResult < 7.000 then
     tomatoSize = 1
-    panels.output.setColor(1,0.64,0)
+    panels.output.setBackgroundColor(1,0,0)
   elseif numericalResult < 8.500 then
     tomatoSize = 2
-    panels.output.setColor(1,0.84,0)
+    panels.output.setBackgroundColor(1,0.64,0)
   elseif numericalResult < 9.000 then
     tomatoSize = 3
-    panels.output.setColor(0.2,0.8,0.2)
+    panels.output.setBackgroundColor(1,0.84,0)
+  elseif numericalResult < 9.2 then
+    tomatoSize = 4
+    panels.output.setBackgroundColor(0.2,0.8,0.2)
   else
     tomatoSize = 4
-    panels.output.setColor(1,0,0)
+    panels.output.setBackgroundColor(1,0,0)
     drawAnimation = true
     animationPhase = 1
   end
