@@ -1,5 +1,0 @@
-AquaCrop 4.0 (June 2012) - Output created on (date) : 18/08/2020   at (time) : 11:08:49
-
-   Period     Day1   Month1    Year1     Rain      ETo       GD     CO2      Irri   Infilt   Runoff    Drain   Upflow        E     E/Ex       Tr   Tr/Trx    SaltIn   SaltOut    SaltUp  SaltProf     Cycle   SaltStr  FertStr  TempStr   ExpStr   StoStr  BioMass  Brelative   HI     Yield     WPet     DayN   MonthN    YearN  File
-                                           mm       mm    °C.day    ppm        mm       mm       mm       mm       mm       mm        %       mm        %    ton/ha    ton/ha    ton/ha    ton/ha      days       %        %        %        %        %    ton/ha        %       %    ton/ha    kg/m3
-   Tot(1)       22       10     2011      3.1    557.1   1938.0   392.57    298.0    301.1      0.0     25.6      0.0     28.6       21    311.7       90     0.954     0.268     0.000     0.686      124        0        0        0       14        8    14.603       91     62.9    9.190     2.70       25        2     2012  Optim.PRO
