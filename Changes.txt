@@ -26,11 +26,11 @@ Feature:
 - Optional: Bestenliste
 
 
-------initialScreen.lua
+------initialScreen.lua (done)
 
-panels.ki = createPanel(panel3X, lowerY, panelWidth, lowerHeight, "Ertrag mit KI: 9.300 t/ha", smallFont)
+panels.ki = createPanel(panel3X, lowerY, panelWidth, lowerHeight, "Ertrag mit KI: 9.300 t/ha", smallFont) (done)
 
-------config.lua
+------config.lua (done)
 
 --Options for the panels
   --Font size for the "big font"

@@ -41,9 +41,9 @@ CONFIG = {
   
   --Options for the panels
   --Font size for the "big font"
-  bigFontSize = 42,
+  bigFontSize = 38,
   --Font size for the "small font"
-  smallFontSize = 30,
+  smallFontSize = 24,
   --margin between rectangle and text (even number!)
   panelMargin = 10, 
   --Length of the color transition cycle, in seconds
