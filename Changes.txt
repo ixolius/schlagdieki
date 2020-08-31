@@ -1,0 +1,70 @@
+KI: 9,75 t/ha  ->  Zielvorgabe
+Bestes Numerisch: 9,00 t/ha
+Bestes Grafisch:
+Konstant:
+
+----------------------------------
+rot < 7 t/ha  -> kleine Tomate
+7 t/ha < orange < 8,5 t/ha -> große Pflanze
+8,5 t/ha < grün < 9,0 t/ha mit  1 Frucht
+< 9,2 t/ha < grün -> mit 2 Früchten
+> 9,2 t/ha < Farbeffekte -> mit 3 Früchten
+----------------------------------
+
+Feature:
+
+- GIT!!!!! (done)
+
+- Farbverlauf (done)
+- DIN Schriften (done)
+- Zeitachse (done)
+- Bilder mit transparenten Hintergrund abhängig von Ertrag (done)
+- Wassergaben in mm pro Balken (done)
+- zusätzliches panel "back" (done)
+- Panels vertikal verkleinern (oben, unten)
+
+- Optional: Bestenliste
+
+
+------initialScreen.lua
+
+panels.ki = createPanel(panel3X, lowerY, panelWidth, lowerHeight, "Ertrag mit KI: 9.300 t/ha", smallFont)
+
+------config.lua
+
+--Options for the panels
+  --Font size for the "big font"
+  bigFontSize = 38,
+  --Font size for the "small font"
+  smallFontSize = 24,
+
+------ Fehler im Text
+
+Verschiebe die Balken, um die Menge für die 10 Bewässerungsereignisse zu steuern. Du hast immer nur 300 mm Wasser, schiebst du einen Balken nach oben, sinken die Mengen für die anderen Tage. Schaffst du es, die KI zu schlagen?
+
+------ Englischer  Text
+Touch and move the bars up and down to distribute 300 mm of water over 10 irrigation events. The more water you use in one event the less is left for the other events.
+Can you beat the AI?
+
+Tag -> day
+Beenden -> close
+Ertrag mit KI -> Yield by AI
+
+------ Deutsche / Englische Version
+run_de.bat
+run_en.bat
+
+------ Darstellung der Tomatenpflanze
+- Farben im Hintergrund ändern
+- Fälle: siehe oben
+
+-----------------------------------------------------------------v2.0 Rangliste
+
+Rahmen unter Panel-Leiste: 
+
+-------------------|------------ (200/35799)
+
+lesen beim Starten in HS
+einfügen
+speichern beim Beenden
+Problem: Speichern in seq-file: direkt-zugriff?
