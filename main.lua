@@ -7,6 +7,7 @@ love.load = function(arg)
   require "config"
   require "panel"
   require "image"
+  require "ranking"
   --important globals
   if arg [1] == "de" then
     texts = CONFIG.text_de
@@ -16,6 +17,8 @@ love.load = function(arg)
   controls = {}
   panels = {}
   sum = 0
+  results = readRankingFile()
+  ranking = 0
   drawAnimation = false
   tomatoSize = 3
   calculationRunning = false
@@ -30,6 +33,7 @@ love.draw = function()
     v.draw()
   end
   imageBox.draw(tomatoSize)
+  rankingModule.draw()
 end
 
 love.update = function(dt)
@@ -73,3 +77,9 @@ love.mousepressed = function(x,y)
   panels.start.click(x,y)
   panels.back.click(x,y)
 end
+
+love.quit = function()
+  writeRankingFile()
+  return false
+end
+

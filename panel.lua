@@ -12,12 +12,13 @@ function createPanel(x,y,width,height,text,font,callback)
   panel.height = height
   panel.text = text
   
-  local numberOfLines = math.ceil(fontWidth / (width -20))
+  local doublePadding = CONFIG.panelPadding * 2
+  local numberOfLines = math.ceil(fontWidth / (width - doublePadding))
   local textHeight = fontHeight*numberOfLines
-  if textHeight + 20 > height then
+  if textHeight + doublePadding > height then
     error("Too much text in a panel: " .. text)
   end
-  panel.textY = panel.y + (height - textHeight) / 2
+  panel.textY =  panel.y + (panel.height - textHeight) /2
   
   panel.colorR, panel.colorG, panel.colorB = 1,1,1
   panel.bgColorR, panel.bgColorG, panel.bgColorB = 0,0,0
@@ -30,7 +31,7 @@ function createPanel(x,y,width,height,text,font,callback)
     love.graphics.rectangle("fill",panel.x + linewidth, panel.y + linewidth, panel.width - 2*linewidth, panel.height - 2*linewidth)
     love.graphics.setColor(panel.colorR,panel.colorG,panel.colorB)
     love.graphics.setFont(panel.font)
-    love.graphics.printf(panel.text,panel.x + 10, panel.textY,panel.width -20, "center")
+    love.graphics.printf(panel.text,panel.x + CONFIG.panelPadding, panel.textY,panel.width - doublePadding, "center")
   end
   
   panel.setText = function(text)

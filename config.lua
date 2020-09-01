@@ -15,15 +15,20 @@ CONFIG = {
   --Window proportions
   --global margins (even number!)
   globalMargin = 60,
-  --margins between the three vertical sections
-  verticalMargin = 60,
-  --relative size of the upper part (the three parts should add up to 1)
+  --margins between the four vertical sections
+  verticalMargin = 30,
+  --relative size of the upper part (the four parts should add up to 1)
   upperPart = 0.2,
   --relative size of the middle part
   middlePart = 0.6,
-  --relative size of the lower part
-  lowerPart = 0.2,
-  --margin between the buttons in the lower
+  --relative size of the lower part 
+  lowerPart = 0.12,
+  --relative size of the bottom part
+  bottomPart = 0.08,
+  --margin between the buttons in the lower part
+  panelMargin = 30,
+  --part of the bottom part that is used for the panel (the rest goes to the ranking module)
+  bottomPanelPart = 0.35,
   
   --Options for the controls
   --width
@@ -43,11 +48,15 @@ CONFIG = {
   --Font size for the "big font"
   bigFontSize = 38,
   --Font size for the "small font"
-  smallFontSize = 24,
-  --margin between rectangle and text (even number!)
-  panelMargin = 10, 
+  smallFontSize = 24, 
+  --minimum space between panel border and text, additional padding
+  panelPadding = 10,
   --Length of the color transition cycle, in seconds
   colorTransition = 12,
+  
+  --Options for the Ranking Module
+  --Radius of the circle
+  rankingModuleCircleRadius = 10,
   
   --texts
   text_de = {
@@ -55,14 +64,16 @@ CONFIG = {
     start = "Start",
     ki = "Ertrag mit KI: 9.300 t/ha",
     back = "Beenden",
-    controls = "Tag "
+    controls = "Tag ",
+    ranking = "Deine Platzierung: "
   },
   text_en = {
     help = "Touch and move the bars up and down to distribute 300 mm of water over 10 irrigation events. The more water you use in one event the less is left for the other events. Can you beat the AI?",
     start = "start",
     ki = "Yield by AI: 9.300 t/ha",
     back = "close",
-    controls = "day "
+    controls = "day ",
+    ranking = " Your Ranking: "
   }
   
   

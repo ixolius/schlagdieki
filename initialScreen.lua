@@ -17,6 +17,8 @@ local startFunction = function()
   panels.output.setText(result .. " t/ha")
   --love.window.setFullscreen(true)
   local numericalResult = tonumber(result)
+  ranking = placeResult(result*1000)
+  panels.ranking.setText(texts.ranking .. tostring(ranking) .. " / " .. tostring(#results))
   drawAnimation = false
   --THE SETTINGS FOR COLORS, TOMATO IMAGES AND CORRESPONDING VALUES ARE BELOW
   panels.output.setColor(0,0,0)
@@ -44,13 +46,16 @@ function createInitialScreen()
   --calculate  dimensions
   local totalWidth,totalHeight = love.graphics.getDimensions()
   local availableWidth = totalWidth - 2*CONFIG.globalMargin
-  local availableHeight = totalHeight - 2*(CONFIG.globalMargin + CONFIG.verticalMargin)
+  local availableHeight = totalHeight - 2*CONFIG.globalMargin - 3*CONFIG.verticalMargin
   local upperHeight = availableHeight * CONFIG.upperPart
   local upperY = CONFIG.globalMargin
   local middleHeight = availableHeight * CONFIG.middlePart
   local middleY = upperY + CONFIG.verticalMargin + upperHeight
   local lowerHeight = availableHeight * CONFIG.lowerPart
   local lowerY = middleY + CONFIG.verticalMargin + middleHeight
+  local bottomY = lowerY + CONFIG.verticalMargin + lowerHeight
+  local bottomHeight = availableHeight * CONFIG.bottomPart
+  local bottomRankingModuleY = bottomY + (bottomHeight / 2)
   
   local imageWidth = CONFIG.controlWidth*CONFIG.imageWidth
   local imageX = totalWidth - imageWidth - CONFIG.globalMargin
@@ -61,6 +66,12 @@ function createInitialScreen()
   local panel2X = panel1X + CONFIG.panelMargin + panelWidth
   local panel3X = panel2X + CONFIG.panelMargin + panelWidth
   local panel4X = panel3X + CONFIG.panelMargin + panelWidth
+  local availableBottomWidth = availableWidth - CONFIG.panelMargin
+  local bottomRankingModuleWidth = availableBottomWidth * (1- CONFIG.bottomPanelPart)
+  local bottomPanelX = CONFIG.globalMargin + CONFIG.panelMargin + bottomRankingModuleWidth
+  local bottomPanelWidth = availableBottomWidth * CONFIG.bottomPanelPart
+
+
   
   --load fonts
   local miniFont = love.graphics.newFont("DIN Regular.otf", CONFIG.miniFontSize)
@@ -77,4 +88,7 @@ function createInitialScreen()
   panels.back = createPanel(panel4X,lowerY,panelWidth,lowerHeight,texts.back,bigFont, function() love.event.quit(0) end)
   panels.help = createPanel(CONFIG.globalMargin,upperY,availableWidth, upperHeight, texts.help, smallFont)
   panels.help.setColor(171/255,210/255,237/255)
+  panels.ranking = createPanel(bottomPanelX,bottomY,bottomPanelWidth,bottomHeight, "  ", smallFont)
+  
+  rankingModule = createRankingModule(CONFIG.globalMargin,bottomRankingModuleY,bottomRankingModuleWidth,CONFIG.rankingModuleCircleRadius)
 end
