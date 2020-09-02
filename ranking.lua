@@ -1,6 +1,6 @@
 
 function readRankingFile()
-  local f = io.open("ranking", "rb")
+  local f = io.open("rankings.txt", "rb")
   if not f then error("A readable file called 'ranking' has to exist in the program folder") end
   local block = 10
   local eof = false
@@ -22,7 +22,7 @@ function readRankingFile()
 end
 
 function writeRankingFile()
-  local f = io.open("ranking","wb")
+  local f = io.open("ranking.txt","wb")
   for i,v in ipairs(results) do
     f:write(love.data.pack("string","I2",v))
   end
