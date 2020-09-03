@@ -88,7 +88,7 @@ function createInitialScreen()
   panels.back = createPanel(panel4X,lowerY,panelWidth,lowerHeight,texts.back,bigFont, function() love.event.quit(0) end)
   panels.help = createPanel(CONFIG.globalMargin,upperY,availableWidth, upperHeight, texts.help, smallFont)
   panels.help.setColor(171/255,210/255,237/255)
-  panels.ranking = createPanel(bottomPanelX,bottomY,bottomPanelWidth,bottomHeight, "  ", smallFont)
+  panels.ranking = createPanel(bottomPanelX,bottomY,bottomPanelWidth,bottomHeight, texts.rankingStart, smallFont)
   
   rankingModule = createRankingModule(CONFIG.globalMargin,bottomRankingModuleY,bottomRankingModuleWidth,CONFIG.rankingModuleCircleRadius)
 end

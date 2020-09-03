@@ -65,7 +65,8 @@ CONFIG = {
     ki = "Ertrag mit KI: 9.300 t/ha",
     back = "Beenden",
     controls = "Tag ",
-    ranking = "Deine Platzierung: "
+    ranking = "Deine Platzierung: ",
+    rankingStart = "Noch keine Platzierung"
   },
   text_en = {
     help = "Touch and move the bars up and down to distribute 300 mm of water over 10 irrigation events. The more water you use in one event the less is left for the other events. Can you beat the AI?",
@@ -73,7 +74,8 @@ CONFIG = {
     ki = "Yield by AI: 9.300 t/ha",
     back = "close",
     controls = "day ",
-    ranking = " Your Ranking: "
+    ranking = " Your Ranking: ",
+    rankingStart = "No placement yet"
   }
   
   
