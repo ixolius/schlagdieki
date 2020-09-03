@@ -1,7 +1,12 @@
 
 function readRankingFile()
-  local f = io.open("rankings.txt", "rb")
-  if not f then error("A readable file called 'ranking' has to exist in the program folder") end
+  local f = io.open("ranking.txt", "rb")
+  if not f then 
+    local f2 = io.open("ranking.txt", "w")
+    if not f2 then error("A readable file called 'ranking' has to exist in the program folder") end
+    f2:close()
+    f = io.open("ranking.txt", "rb")
+  end
   local block = 10
   local eof = false
   local results = {}
