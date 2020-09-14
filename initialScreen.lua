@@ -25,7 +25,7 @@ local startFunction = function()
   if numericalResult < 7.000 then
     tomatoSize = 1
     panels.output.setBackgroundColor(1,0,0)
-  elseif numericalResult < 8.500 then
+  elseif numericalResult < 8.600 then
     tomatoSize = 2
     panels.output.setBackgroundColor(1,0.64,0)
   elseif numericalResult < 9.000 then
@@ -35,7 +35,7 @@ local startFunction = function()
     tomatoSize = 4
     panels.output.setBackgroundColor(0.2,0.8,0.2)
   else
-    tomatoSize = 4
+    tomatoSize = 5
     panels.output.setBackgroundColor(1,0,0)
     drawAnimation = true
     animationPhase = 1
@@ -58,6 +58,7 @@ function createInitialScreen()
   local bottomRankingModuleY = bottomY + (bottomHeight / 2)
   
   local imageWidth = CONFIG.controlWidth*CONFIG.imageWidth
+  print(CONFIG.controlWidth,CONFIG.imageWidth, imageWidth)
   local imageX = totalWidth - imageWidth - CONFIG.globalMargin
   
   local availablePanelWidth = availableWidth - 3*CONFIG.panelMargin
