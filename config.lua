@@ -74,8 +74,8 @@ CONFIG = {
     ki = "Yield by AI: 9.300 t/ha",
     back = "close",
     controls = "day ",
-    ranking = " Your Ranking: ",
-    rankingStart = "No placement yet"
+    ranking = " Your ranking: ",
+    rankingStart = "No ranking yet"
   }
   
   
